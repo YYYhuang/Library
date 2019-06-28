@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@mipmap/b"
-    tools:context=".BookFragment">
+    tools:context=".BookFragment"
+    tools:ignore="MissingDefaultResource">
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.constraint.ConstraintLayout

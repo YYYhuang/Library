@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@mipmap/b"
-    tools:context=".BorrowFragment">
+    tools:context=".BorrowFragment"
+    tools:ignore="MissingDefaultResource">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -32,7 +33,7 @@
                 android:textSize="20sp"/>
 
             <EditText
-                android:id="@+id/cbnf"
+                android:id="@+id/yhgh"
                 android:layout_width="0dp"
                 android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content"
@@ -61,7 +62,7 @@
                 android:textSize="20sp"/>
 
             <EditText
-                android:id="@+id/jg"
+                android:id="@+id/tsbh"
                 android:layout_width="0dp"
                 android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content"

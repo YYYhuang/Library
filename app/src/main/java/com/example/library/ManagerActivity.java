@@ -70,7 +70,7 @@ public class ManagerActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
                 for (int i = 0; i < tvs.size(); i++) {
                     if (i == index) {
-                        tvs.get(i).setTextColor(Color.parseColor("#009944"));
+                        tvs.get(i).setTextColor(Color.parseColor("#B9B9B9"));
                         tvlines.get(i).setVisibility(View.VISIBLE);
                     } else {
                         tvs.get(i).setTextColor(Color.parseColor("#333333"));

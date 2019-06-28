@@ -5,6 +5,12 @@ public class Book {
     private String BookName;
     private String cbs;
 
+    public Book(String num,String BookName,String cbs){
+        this.num=num;
+        this.BookName=BookName;
+        this.cbs=cbs;
+    }
+
     public String getNum() {
         return num;
     }

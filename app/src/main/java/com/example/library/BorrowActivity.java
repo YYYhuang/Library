@@ -1,5 +1,6 @@
 package com.example.library;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,10 +31,26 @@ public class BorrowActivity extends AppCompatActivity {
 
         title.setTitle("借阅情况");
 
-        RecyclerView recyclerView=findViewById(R.id.recycler_view);
+        inits();
+        RecyclerView recyclerView=findViewById(R.id.recycler_view1);
         LinearLayoutManager layoutManager=new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
         BookAdapter adapter=new BookAdapter(bookList);
         recyclerView.setAdapter(adapter);
+    }
+    public void inits() {
+        SharedPreferences pref = getSharedPreferences("borrows", MODE_PRIVATE);
+        int count = pref.getInt("num", 0);
+        for (int j = 1; j <= count; j++) {
+            String id = Integer.toString(j);
+            String bId="bid"+id;
+            String bName="bname"+id;
+            String bDate="date"+id;
+            String bookId = pref.getString(bId, "");
+            String bookName = pref.getString(bName, "");
+            String borrowDate=pref.getString(bDate,"");
+            Book book=new Book(bookId,bookName,borrowDate);
+            bookList.add(book);
+        }
     }
 }

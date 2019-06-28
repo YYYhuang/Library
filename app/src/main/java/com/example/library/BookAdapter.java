@@ -22,7 +22,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
         View view= LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.book_item,viewGroup,false);
         ViewHolder holder=new ViewHolder(view);
-        return null;
+        return holder;
     }
 
     @Override
